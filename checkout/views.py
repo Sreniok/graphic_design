@@ -9,8 +9,8 @@ from projects.models import Projects
 import stripe
 
 # Create your views here.
-
 stripe.api_key = settings.STRIPE_SECRET
+
 
 @login_required()
 def checkout(request):
@@ -29,33 +29,33 @@ def checkout(request):
                 project = get_object_or_404(Projects, pk=id)
                 total += quantity * project.price
                 order_line_item = OrderLineItem(
-                    order = order,
-                    project = project,
-                    quantity = quantity
-                    )
+                    order=order,
+                    project=project,
+                    quantity=quantity
+                )
                 order_line_item.save()
-
+             
             try:
                 customer = stripe.Charge.create(
-                    amount = int(total * 100),
-                    currency = "EUR",
-                    description = request.user.email,
-                    card = payment_form.cleaned_data['stripe_id'],
+                    amount=int(total * 100),
+                    currency="EUR",
+                    description=request.user.email,
+                    card=payment_form.cleaned_data['stripe_id']
                 )
             except stripe.error.CardError:
                 messages.error(request, "Your card was declined!")
-
+            
             if customer.paid:
                 messages.error(request, "You have successfully paid")
                 request.session['cart'] = {}
                 return redirect(reverse('projects'))
             else:
-                messages.error(request, "Unable to make pyment")
+                messages.error(request, "Unable to take payment")
         else:
-            print(payment_form.error)
+            print(payment_form.errors)
             messages.error(request, "We were unable to take a payment with that card!")
     else:
         payment_form = MakePaymentForm()
-        oreder_form = OrderForm()
-
-    return render(request, "checkout.html", {'order_form': oreder_form, 'payment_form': payment_form, 'publishable': settings.STRIPE_PUBLISHABLE})
+        order_form = OrderForm()
+    
+    return render(request, "checkout.html", {"order_form": order_form, "payment_form": payment_form, "publishable": settings.STRIPE_PUBLISHABLE})

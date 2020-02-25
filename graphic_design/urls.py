@@ -20,10 +20,10 @@ from accounts import urls as urls_accounts
 from projects import urls as urls_projects
 from cart import urls as urls_cart
 from search import urls as urls_search
-from checkout import urls as urls_checkout
 from projects.views import all_projects
 from django.views import static
 from .settings import MEDIA_ROOT
+from checkout import urls as urls_checkout
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
