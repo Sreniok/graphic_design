@@ -5,17 +5,17 @@ from .forms import MakePaymentForm, OrderForm
 from .models import OrderLineItem
 from django.conf import settings
 from django.utils import timezone
-from project.models import Projects
+from projects.models import Projects
 import stripe
 
 # Create your views here.
 
-stripe.api_key = setting.STRIPE_SECRET
+stripe.api_key = settings.STRIPE_SECRET
 
 @login_required()
 def checkout(request):
-    if request.method=='POST':
-        oreder_form = MakePaymentForm(request.POST)
+    if request.method == "POST":
+        order_form = OrderForm(request.POST)
         payment_form = MakePaymentForm(request.POST)
 
         if order_form.is_valid() and payment_form.is_valid():
@@ -25,13 +25,13 @@ def checkout(request):
 
             cart = request.session.get('cart', {})
             total = 0
-            for id, quality in cart.items():
+            for id, quantity in cart.items():
                 project = get_object_or_404(Projects, pk=id)
                 total += quantity * project.price
                 order_line_item = OrderLineItem(
                     order = order,
                     project = project,
-                    quantity = quality
+                    quantity = quantity
                     )
                 order_line_item.save()
 
@@ -42,7 +42,7 @@ def checkout(request):
                     description = request.user.email,
                     card = payment_form.cleaned_data['stripe_id'],
                 )
-            except strope.error.CardError:
+            except stripe.error.CardError:
                 messages.error(request, "Your card was declined!")
 
             if customer.paid:
