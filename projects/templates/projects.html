@@ -13,12 +13,13 @@
     <!-- Seearch -->
     <div class="container">
         <div class="search">
-            <form action="{% url 'search' %}" method="get">
-                <input type="text" name="q" placeholder="Search Design Project" id="search-input">
+            <form name="search-project" required action="{% url 'search' %}" method="get" >
+                <input type="text" name="q" required placeholder="Project name" id="search-input">
                 <button type="submit" class="btn btn-primary">Search</button>
             </form>
         </div>
     </div>
+    <!-- Projects -->
     <div class="container">
         {% for project in projects %}
         <div class="row">
@@ -31,10 +32,10 @@
                 <p class="project-description">{{ project.description}}</p>
                 <p><strong>Price: €{{ project.price }}</strong></p>
                 <hr>
-                    <form method="post" action="{% url 'add_to_cart' project.id %}">
+                    <form name="quantity-project" method="post" action="{% url 'add_to_cart' project.id %}">
                     {% csrf_token %}
                     <div class="input-group">
-                        <input name="quantity" type="number" min="0" max="999" class="form-control" placeholder="Quantity">
+                        <input name="quantity" required type="number" min="0" max="999" class="form-control" placeholder="Quantity">
                         <span class="input-group-btn">
                                 <button class="btn btn-primary" type="submit">Add</button>
                             </span>
