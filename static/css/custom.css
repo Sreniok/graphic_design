@@ -71,7 +71,7 @@ body {
 
 
 .search {
-    margin-bottom: 100px;
+    margin: 49px;
     text-align: center;
 }
 
@@ -238,7 +238,7 @@ body {
         height: 250px;
     }
     #search-input {
-        width: 340px;
+        width: 266px;
         margin-bottom: 10px;
     }
     .search {
@@ -249,22 +249,33 @@ body {
         font-size: 21px;
     }
 
-    .banner {
-        margin: 230px 0px 0px 0px;
-        padding: 1px;
+    #banner-projects {
+        margin: 288px -2px;
+    } 
+
+    #banner-register {
+    margin: 264px 0px 0px 0px;
+    } 
+
+    #banner-image {
+    width: 108%;
+    background-attachment: inherit;
     }
 
     .register-input {
-        margin: 70px 20px 0px 35px;
+        margin: 336px 20px 0px 35px;
     }
+    
 
     .register-image {
         height: 312px;
         background-attachment: inherit;
         width: 104%;
     }
-    #banner-register {
-        margin-top: 264px;
+   
+    .banner-register-p {
+        margin: 10px;
+        font-size: 18px;
     }
 
     #cart {
@@ -272,7 +283,7 @@ body {
     }
 
     #banner-cart {
-        margin-top: 259px;
+        margin: 258px 0px;
     }
 
     .input-group {
@@ -282,5 +293,17 @@ body {
     
     #cart-background {
         background-attachment: inherit;
+    }
+
+    .login-image {
+        background-attachment: inherit;
+        width: 104%;
+    }
+    #login-input {
+        margin: 80px 20px 0px 35px;
+    }
+    
+    .checkout {
+        margin-top: 200px;
     }
 }

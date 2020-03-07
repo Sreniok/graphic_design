@@ -3,15 +3,15 @@
 
     <!-- Banner -->
     <div class="container-fluid" id="banner-image">
-        <div class="banner">
+        <div class="banner" id="banner-projects">
             <h1><span class="banner-text">Graphic Designe</span></h1>
             <p class="banner-p">…is defined as the structuring and organisation of visual information to aid the communication of  business.  But we like to explain it as  – getting your message across clearly while adding value to your business.</p>
         </div>
     </div>
-    <hr>
     <!-- Seearch -->
     <div class="container">
         <div class="search">
+        <hr>
             <form name="search-project" required action="{% url 'search' %}" method="get" >
                 <input type="text" name="q" required placeholder="Project name" id="search-input">
                 <button type="submit" class="btn btn-primary">Search</button>
