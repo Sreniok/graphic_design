@@ -3,18 +3,27 @@
 {% load bootstrap_tags %}
 
 {% block content %}
-<div class="row row-flex">
+<!-- Banner -->
+<div class="container-fluid" id="cart-background">
+    <div class="banner" id="banner-cart">
+        <h1><span class="banner-text">ABOUT US</span></h1>
+        <p class="banner-p">We are an Award Winning Graphic Design Studio based in Dublin. The focus of our Design Studio is to create the very best visual communications for your business through clever and original graphic design. To us, every project, large or small, is a unique and exciting challenge. We offer a personalised, friendly and unique approach.</p>
+    </div>
+</div>
+<hr>
+<!-- Checkout -->
+<div class="row">
     {% for item in cart_items %}
     
-    <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-display">
+    <div class="col-sm-6 col-md-6 col-lg-6" id="cart">
+
         
-        <div class="projects" style="background-image: url('{{ MEDIA_URL }}{{ item.project.image }}')"></div>
+        <div class="cart-image" style="background-image: url('{{ MEDIA_URL }}{{ item.project.image }}')"></div>
         
-        <div class="caption">
+        <div class="cart-item">
             <h3>{{ item.project.name }}</h3>
             <p class="project-description">{{ item.project.description }}</p>
             <p>{{ item.project.price }}</p>
-            <p>
                 
                 <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
                     {% csrf_token %}
@@ -30,13 +39,14 @@
                 </form>
             </p>
         </div>
-    </div>
+    </div>   
     {% endfor %}
 </div>
-<div class="row">
+<hr>
+<div class="checkout">
     <p>Total</p>
     <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</p>
     <a href="{% url 'checkout' %}" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
 </div>
-
+<hr>
 {% endblock %}

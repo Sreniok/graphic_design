@@ -1,14 +1,15 @@
 /* base.html */
 body {
-    width: fit-content;
     font-family: 'Cutive Mono', monospace;
     padding-top: 54px;
     background-color: #f9f9f9;
 }
-.navbar-toggle {
+.navbar-default .navbar-toggle {
     border-color: #c1b8b9;
 }
-
+.fa {
+    margin-right: 4px;
+}
 .navbar {
     background-color: #b1aab2;
     border-color: #b1aab2;
@@ -103,14 +104,13 @@ body {
 
 .banner {
         background-color: #d8d4d8;
-        background-color: #d8d4d8;
         margin: 50px;
         padding: 5px;
         text-align: center;
 }
 
 .banner-text {
-        text-shadow: 2px 2px 8px;
+        text-shadow: 0px 0px 1px;
         color: #3e1b1b;
 }
 
@@ -146,7 +146,7 @@ body {
     min-height: 40px;
 }
 
-/* Checout.html */
+/* checout.html */
 
 .panel-body {
     height: 100%;
@@ -158,6 +158,66 @@ body {
     padding: 0 10px;
 }
 
+/* register.html */
+
+.register-image {
+    background-image: url("https://images.unsplash.com/photo-1518117823675-9a4bb23df61c?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 530px;
+    background-attachment: fixed;
+    padding-top: 1px;
+    margin: 0px;
+}
+
+.register-input {
+    margin: 82px 300px 0px 300px;
+}
+/* login.html*/
+
+.login-image {
+    background-image: url("http://www.waqastheseo.com/wp-content/uploads/2019/03/Digital-Marketing-Portfolio.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 530px;
+    background-attachment: fixed;
+    padding-top: 1px;
+    margin: 0px;
+}
+
+/* cart.html */
+
+.cart-image {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.cart-item {
+    text-align: center;
+}
+
+.checkout {
+    text-align: center;
+    margin-top: 58px;
+    margin-bottom: 60px;
+}
+
+#cart-background {
+    background-image: url("https://marketeers.com/wp-content/uploads/2018/02/52461810_l.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 530px;
+    background-attachment: fixed;
+    padding-top: 1px;
+    margin: 0px;
+}
 /* Media Queries */
 
 @media only screen and (max-width: 992px) {
@@ -177,9 +237,12 @@ body {
     .project-image {
         height: 250px;
     }
-
+    #search-input {
+        width: 340px;
+        margin-bottom: 10px;
+    }
     .search {
-        margin-bottom: 0;
+        margin-bottom: 25px;
     }
 
     .navbar-brand {
@@ -187,7 +250,37 @@ body {
     }
 
     .banner {
-        margin: 312px 0px 0px 0px;
+        margin: 230px 0px 0px 0px;
         padding: 1px;
+    }
+
+    .register-input {
+        margin: 70px 20px 0px 35px;
+    }
+
+    .register-image {
+        height: 312px;
+        background-attachment: inherit;
+        width: 104%;
+    }
+    #banner-register {
+        margin-top: 264px;
+    }
+
+    #cart {
+        margin-top: 93px;
+    }
+
+    #banner-cart {
+        margin-top: 259px;
+    }
+
+    .input-group {
+        width: 80%;
+        margin-left: 40px;
+    }
+    
+    #cart-background {
+        background-attachment: inherit;
     }
 }
