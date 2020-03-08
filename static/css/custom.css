@@ -201,11 +201,22 @@ body {
 .cart-item {
     text-align: center;
 }
+.cart-row {
+    margin-top: 50px;
+}
+#cart {
+    margin-bottom: 20px;
+}
 
 .checkout {
     text-align: center;
     margin-top: 58px;
     margin-bottom: 60px;
+}
+
+.cart-list {
+    margin: 40px 0px 40px 0px;
+    text-align: center;
 }
 
 #cart-background {
@@ -276,7 +287,7 @@ body {
     } 
 
     #banner-image {
-    width: 108%;
+    width: 100%;
     background-attachment: inherit;
     }
 
@@ -311,6 +322,10 @@ body {
     
     #cart-background {
         background-attachment: inherit;
+    }
+
+    .cart-list {
+        margin: 200px 0px 40px 0px;
     }
 
     .login-image {

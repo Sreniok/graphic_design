@@ -11,14 +11,14 @@
     </div>
 </div>
 <!-- Checkout -->
-<div class="row">
+<div class="cart-row">
+    <div class="cart-list">
+        <h1>Shopping List</h1>
+    </div>
     {% for item in cart_items %}
     
-    <div class="col-sm-6 col-md-6 col-lg-6" id="cart">
-
-        
-        <div class="cart-image" style="background-image: url('{{ MEDIA_URL }}{{ item.project.image }}')"></div>
-        
+    <div class="col-sm-6 col-md-4 col-lg-3" id="cart"> 
+        <div class="cart-image" style="background-image: url('{{ MEDIA_URL }}{{ item.project.image }}')"></div>    
         <div class="cart-item">
             <h3>{{ item.project.name }}</h3>
             <p class="project-description">{{ item.project.description }}</p>
@@ -41,10 +41,12 @@
     </div>   
     {% endfor %}
 </div>
-<div class="checkout">
-    <p>Total</p>
-    <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</p>
-    <a href="{% url 'checkout' %}" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
-</div>
+<div class="col-sm-12 col-md-12 col-lg-12">
+
+    <div class="checkout">
+        <p>Total</p>
+        <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</p>
+        <a href="{% url 'checkout' %}" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
+    </div>
 <hr>
 {% endblock %}
