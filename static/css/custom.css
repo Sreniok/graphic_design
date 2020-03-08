@@ -209,6 +209,19 @@ body {
 }
 
 #cart-background {
+    background-image: url("https://qtxasset.com/styles/breakpoint_xl_880px_w/s3/fiercebiotech/1569411990/business-3152586_1280.jpg/business-3152586_1280.jpg?s1VaTL7GeYgBpVXltUKr0Tfd74G.LVcD&itok=tXU8oRCY");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 530px;
+    background-attachment: fixed;
+    padding-top: 1px;
+    margin: 0px;
+}
+
+/* profile.html */
+
+#profile-background {
     background-image: url("https://marketeers.com/wp-content/uploads/2018/02/52461810_l.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
@@ -218,6 +231,11 @@ body {
     padding-top: 1px;
     margin: 0px;
 }
+
+.profile-text {
+    text-shadow: 0px 0px 1px;
+}
+
 /* Media Queries */
 
 @media only screen and (max-width: 992px) {
@@ -283,7 +301,7 @@ body {
     }
 
     #banner-cart {
-        margin: 258px 0px;
+        margin: 278px 0px;
     }
 
     .input-group {
@@ -305,5 +323,13 @@ body {
     
     .checkout {
         margin-top: 200px;
+    }
+
+    #banner-profile {
+        margin: 200px 0px 0px 0px;
+    }
+
+    .hr-profile {
+        margin-top: 170px;
     }
 }

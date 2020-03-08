@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-    <h2>Success!</h2>
-    <p>You are logged in as {{ user.email }} </p>
+<!-- Banner -->
+<div class="container-fluid" id="profile-background">
+    <div class="banner" id="banner-profile">
+        <h1><span class="profiler-text">Success!</span></h1>
+        <p class="banner-p">You are logged in as {{ user.email }} </p>
+    </div>
+</div>
+<hr class="hr-profile">
 {% endblock %}
