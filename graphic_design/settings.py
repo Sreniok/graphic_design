@@ -135,8 +135,8 @@ USE_L10N = True
 USE_TZ = True
 
 
-Static files (CSS, JavaScript, Images)
-https://docs.djangoproject.com/en/1.11/howto/static-files/
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 AWS_S3_OBJECT_PARAMETERS = {
     'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
