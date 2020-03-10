@@ -17,25 +17,29 @@
     <div class="checkout-title">
         <p>Order details</p>
     </div>
-    <div class="col-sm-12 col-md-12 col-lg-12">
-        
-        {% for item in cart_items %}
-                <div class="checkout-list">
-                    <ul>
-                        <li>Project name<p><strong>{{ item.project.name }}</strong></p></li>
-                        <li>Quntity<p>{{ item.quantity }}</p></li>
-                        <li>Price<p>{{ item.project.price }}</p></li>
-                    </ul> 
-                </div>      
-        {% endfor %}
+    <div class="row checkout-list">
+        <div class="col-sm-12 col-md-12 col-lg-12">  
+            {% for item in cart_items %}
+                <div class="col-sm-12 col-md-7 col-lg-7" >
+                    <div class="project-image" id="checkout-image" style="background-image: url('{{ MEDIA_URL }}{{ item.project.image }}')"></div>
+                </div>  
+                <div class="col-sm-12 col-md-5 col-lg-5">
+                    <h4>Project name:</h4>
+                    <p><strong>{{ item.project.name }}</strong></p>
+                    <p>Quantity: {{ item.quantity }}</p>
+                    <p><strong>Price per unit: €{{ item.project.price }}</strong></p>
+                </div>
+            {% endfor %}
+        </div>
     </div>
     <hr>
+</div>
     <div class="checkout-total">
         <p><strong>Total</strong></p>
         <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</p>
     </div>
+<div class="container">   
     <div class="row">
-
         <div class="checkout-form">
             <form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
                 <legend>Payment Details</legend>

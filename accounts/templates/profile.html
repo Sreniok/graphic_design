@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-<!-- Banner -->
-<div class="container-fluid" id="profile-background">
-    <div class="banner" id="banner-profile">
+<div class="profile-login">
         <h1><span class="profiler-text">Success!</span></h1>
-        <p class="banner-p">You are logged in as {{ user.email }} </p>
-    </div>
+        <p class="banner-p">You are logged in as {{  user.username }} </p>
+        <p class="">Your email address is {{ user.email }}</p>
+        <p class="">Your user name is {{ user.name }}</p>
+        
 </div>
-<hr class="hr-profile">
+?<hr>
 {% endblock %}

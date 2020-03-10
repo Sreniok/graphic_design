@@ -10,6 +10,11 @@ body {
 .fa {
     margin-right: 4px;
 }
+
+.alert {
+    text-align: center;
+}
+
 .navbar {
     background-color: #b1aab2;
     border-color: #b1aab2;
@@ -158,22 +163,6 @@ body {
     padding: 0 10px;
 }
 
-/* register.html */
-
-.register-image {
-    background-image: url("https://images.unsplash.com/photo-1518117823675-9a4bb23df61c?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
-    height: 530px;
-    background-attachment: fixed;
-    padding-top: 1px;
-    margin: 0px;
-}
-
-.register-input {
-    margin: 82px 300px 0px 300px;
-}
 /* login.html*/
 
 .login-image {
@@ -227,8 +216,7 @@ body {
 }
 
 .checkout-list {
-    background-color: white;
-    margin: 20px 20px 20px 192px;
+       margin-bottom: 20px;
 }
 
 .cart-list {
@@ -236,29 +224,19 @@ body {
     text-align: center;
 }
 
-#cart-background {
-    background-image: url("https://qtxasset.com/styles/breakpoint_xl_880px_w/s3/fiercebiotech/1569411990/business-3152586_1280.jpg/business-3152586_1280.jpg?s1VaTL7GeYgBpVXltUKr0Tfd74G.LVcD&itok=tXU8oRCY");
+#checkout-image {
+    background-size: contain;
+    background-position: center center;
     background-repeat: no-repeat;
-    background-size: 100%;
+    height: 150px;
     width: 100%;
-    height: 530px;
-    background-attachment: fixed;
-    padding-top: 1px;
-    margin: 0px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+
 }
 
 /* profile.html */
 
-#profile-background {
-    background-image: url("https://marketeers.com/wp-content/uploads/2018/02/52461810_l.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
-    height: 530px;
-    background-attachment: fixed;
-    padding-top: 1px;
-    margin: 0px;
-}
 
 .profile-text {
     text-shadow: 0px 0px 1px;
@@ -280,91 +258,30 @@ body {
 }
 
 @media only screen and (max-width: 500px) {
-    .project-image {
-        height: 250px;
-    }
-    #search-input {
-        width: 266px;
-        margin-bottom: 10px;
-    }
-    .search {
-        margin-bottom: 25px;
-    }
+ 
 
-    .navbar-brand {
-        font-size: 21px;
-    }
 
-    #banner-projects {
-        margin: 288px -2px;
-    } 
-
-    #banner-register {
-    margin: 264px 0px 0px 0px;
+    .banner {
+        margin: 250px -15px;
     } 
 
     #banner-image {
-    width: 100%;
-    background-attachment: inherit;
+        width: 100%;
+        background-attachment: inherit;
+    }
+
+    #search-input {
+        width: 160px;
     }
 
     .register-input {
-        margin: 336px 20px 0px 35px;
-    }
-    
-
-    .register-image {
-        height: 312px;
-        background-attachment: inherit;
-        width: 104%;
-    }
-   
-    .banner-register-p {
-        margin: 10px;
-        font-size: 18px;
+        margin-left: 69px;
+        width: 216px;
+        text-align: center;
     }
 
-    #cart {
-        margin-top: 93px;
-    }
-
-    #banner-cart {
-        margin: 278px 0px;
-    }
-
-    .input-group {
-        width: 80%;
-        margin-left: 40px;
-    }
-    
-    #cart-background {
-        background-attachment: inherit;
-    }
-
-    .cart-list {
-        margin: 200px 0px 40px 0px;
-    }
-
-    .login-image {
-        background-attachment: inherit;
-        width: 104%;
-    }
-    #login-input {
-        margin: 80px 20px 0px 35px;
-    }
-    
-    .checkout {
-        margin-top: 200px;
-    }
-
-    #banner-profile {
-        margin: 200px 0px 0px 0px;
-    }
-
-    .hr-profile {
-        margin-top: 170px;
-    }
     .checkout-list {
         margin: 0px;
     }
+
 }

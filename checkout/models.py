@@ -4,7 +4,7 @@ from projects.models import Projects
 # Create your models here.
 class Order(models.Model):
     full_name = models.CharField(max_length=50, blank=False)
-    phone_number = models.CharField(max_length=20, blank=False)
+    phone_number = models.CharField(int, max_length=20, blank=False)
     project_information1 = models.TextField(blank=True)
     project_information2 = models.TextField(blank=True)
     country = models.CharField(max_length=40, blank=False)

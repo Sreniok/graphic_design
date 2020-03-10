@@ -1,52 +1,45 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <!-- Banner -->
-    <div class="container-fluid" id="banner-image">
-        <div class="banner" id="banner-projects">
-            <h1><span class="banner-text">Graphic Designe</span></h1>
-            <p class="banner-p">…is defined as the structuring and organisation of visual information to aid the communication of  business.  But we like to explain it as  – getting your message across clearly while adding value to your business.</p>
-        </div>
+<!-- Seearch -->
+<div class="container">
+    <div class="search">
+    <hr>
+        <form name="search-project" required action="{% url 'search' %}" method="get" >
+            <input type="text" name="q" required placeholder="Project name" id="search-input">
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
     </div>
-    <!-- Seearch -->
-    <div class="container">
-        <div class="search">
-        <hr>
-            <form name="search-project" required action="{% url 'search' %}" method="get" >
-                <input type="text" name="q" required placeholder="Project name" id="search-input">
-                <button type="submit" class="btn btn-primary">Search</button>
-            </form>
+</div>
+<!-- Projects -->
+<div class="container">
+    {% for project in projects %}
+    <div class="row">
+        <div class="col-sm-12 col-md-7 col-lg-7">
+            <div class="project-image" style="background-image: url('{{ MEDIA_URL }}{{ project.image }}')"></div>
         </div>
-    </div>
-    <!-- Projects -->
-    <div class="container">
-        {% for project in projects %}
-        <div class="row">
-            <div class="col-sm-12 col-md-7 col-lg-7">
-                <div class="project-image" style="background-image: url('{{ MEDIA_URL }}{{ project.image }}')"></div>
-            </div>
-            <div class="project">
-                <div class="col-sm-12 col-md-5 col-lg-5">
-                    <h2>{{ project.name }}</h2>
-                <p class="project-description">{{ project.description}}</p>
-                <p><strong>Price: €{{ project.price }}</strong></p>
-                <hr>
-                    <form name="quantity-project" method="post" action="{% url 'add_to_cart' project.id %}">
-                    {% csrf_token %}
-                    <div class="input-group">
-                        <input name="quantity" required type="number" min="0" max="999" class="form-control" placeholder="Quantity">
-                        <span class="input-group-btn">
-                                <button class="btn btn-primary" type="submit">Add</button>
-                            </span>
-                    </div>
-                </form>
+        <div class="project">
+            <div class="col-sm-12 col-md-5 col-lg-5">
+                <h2>{{ project.name }}</h2>
+            <p class="project-description">{{ project.description}}</p>
+            <p><strong>Price: €{{ project.price }}</strong></p>
+            <hr>
+                <form name="quantity-project" method="post" action="{% url 'add_to_cart' project.id %}">
+                {% csrf_token %}
+                <div class="input-group">
+                    <input name="quantity" required type="number" min="0" max="999" class="form-control" placeholder="Quantity">
+                    <span class="input-group-btn">
+                            <button class="btn btn-primary" type="submit">Add</button>
+                        </span>
                 </div>
+            </form>
             </div>
         </div>
-        <hr>
-        {% endfor %}
     </div>
-    {% endblock %}  
+    <hr>
+    {% endfor %}
+</div>
+{% endblock %}  
 
 
 
