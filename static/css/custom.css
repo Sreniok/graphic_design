@@ -287,9 +287,9 @@ body {
     }
 
     .register-input {
-        margin-left: 69px;
-        width: 216px;
+        width: 268px;
         text-align: center;
+        margin: 50px auto;
     }
 
     .checkout-list {
