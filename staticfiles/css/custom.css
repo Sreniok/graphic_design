@@ -1,14 +1,41 @@
+/* base.html */
 body {
-    font-family: Arial;
-    padding-top: 100px;
+    font-family: 'Cutive Mono', monospace;
+    padding-top: 54px;
+    background-color: #f9f9f9;
+}
+.navbar-default .navbar-toggle {
+    border-color: #c1b8b9;
+}
+.fa {
+    margin-right: 4px;
 }
 
-footer {
-    margin-top: 40px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-top: 1px solid #ededed;
-    color: #A9A9A9;
+.alert {
+    text-align: center;
+}
+
+.navbar {
+    background-color: #b1aab2;
+    border-color: #b1aab2;
+    background-image: none;
+    margin-bottom: 0px;
+    padding-top: 3px;
+    font-size: 17px;
+}
+.navbar-brand {
+    font-family: 'Cutive Mono', monospace;
+    text-shadow: 2px 2px 8px;
+    color: #3e1b1b !important;
+    font-size: 36px;
+    font-weight: bold;
+}
+.navbar-nav>li>a {
+    color: #3e1b1b !important;
+
+}
+.alert {
+    margin-bottom: 0px;
 }
 
 .icon-bar {
@@ -17,6 +44,11 @@ footer {
 
 .accountform {
     padding-top: 20px;
+}
+
+.navbar-default .badge {
+    background-color: #d9d3d8;
+    color: #ff0500;
 }
 
 .badge {
@@ -32,15 +64,7 @@ footer {
     background-color: #c67605;
 }
 
-.projects {
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
-    height: 150px;
-    margin: 0 auto;
-}
-
-caption p {
+.caption p {
     word-wrap: break-word;
 }
 
@@ -50,16 +74,214 @@ caption p {
     margin-top: 30px;
 }
 
-.panel-default {
-    border-color: transparent;
-    padding: 0 10px;
+
+.search {
+    margin: 49px;
+    text-align: center;
 }
+
+#search-input {
+    height: 36px;
+    width: 500px;
+    text-align: center;
+    }
+
+.btn {
+    transition: all 0.4s ease 0s;
+    border-radius: 20px;
+}
+
+.btn:hover {
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+}
+
+#banner-image {
+    background-image: url("https://i.pinimg.com/originals/c5/d9/e0/c5d9e05f7c1055e32d67a34363cca041.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 530px;
+    background-attachment: fixed;
+}
+
+.banner {
+        background-color: #d8d4d8;
+        margin: 50px;
+        padding: 5px;
+        text-align: center;
+}
+
+.banner-text {
+        text-shadow: 0px 0px 1px;
+        color: #3e1b1b;
+}
+
+.banner-p {
+    font-size: 18px;
+}
+
+#footer {
+    font-family: 'Cutive Mono', monospace;
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    border-top: none;
+    color: #A9A9A9;
+    }
+.author {
+    font-family: 'Sacramento', cursive;
+    font-size: 25px;
+}
+/* project.html */
+
+.project-image {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 350px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.project-description {
+    min-height: 40px;
+}
+
+/* checout.html */
 
 .panel-body {
     height: 100%;
     border: 1px solid #ddd;
 }
 
-.project-description {
-    min-height: 40px;
+.panel-default {
+    border-color: transparent;
+    padding: 0 10px;
+}
+
+/* login.html*/
+
+.login-image {
+    background-image: url("http://www.waqastheseo.com/wp-content/uploads/2019/03/Digital-Marketing-Portfolio.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 530px;
+    background-attachment: fixed;
+    padding-top: 1px;
+    margin: 0px;
+}
+
+/* cart.html */
+
+.cart-image {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.cart-item {
+    text-align: center;
+}
+.cart-row {
+    margin-top: 50px;
+}
+#cart {
+    margin-bottom: 20px;
+}
+
+.checkout {
+    text-align: center;
+    margin-top: 58px;
+    margin-bottom: 60px;
+}
+
+.checkout-title {
+    text-align: center;
+    margin-top: 50px;
+    text-shadow: 0px 0px 1px;
+    color: #3e1b1b;
+    font-size: 40px;
+}
+
+.checkout-total {
+    text-align: center;
+}
+
+.checkout-list {
+       margin-bottom: 20px;
+}
+
+.cart-list {
+    margin: 40px 0px 40px 0px;
+    text-align: center;
+}
+
+#checkout-image {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 150px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+
+}
+
+/* profile.html */
+
+
+.profile-text {
+    text-shadow: 0px 0px 1px;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 992px) {
+
+   .project-image {
+        height: 450px;
+   }
+
+    .project {
+        width: 80%;
+        margin-left: 50px;
+    }
+   
+}
+
+@media only screen and (max-width: 500px) {
+ 
+
+
+    .banner {
+        margin: 250px -15px;
+    } 
+
+    #banner-image {
+        width: 100%;
+        background-attachment: inherit;
+    }
+
+    #search-input {
+        width: 160px;
+    }
+
+    .register-input {
+        margin-left: 69px;
+        width: 216px;
+        text-align: center;
+    }
+
+    .checkout-list {
+        margin: 0px;
+    }
+
 }
