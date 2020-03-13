@@ -3,14 +3,30 @@
 
 <!-- Seearch -->
 <div class="container">
-    <div class="search">
-    <hr>
-        <form name="search-project" required action="{% url 'search' %}" method="get" >
-            <input type="text" name="q" required placeholder="Project name" id="search-input">
-            <button type="submit" class="btn btn-primary">Search</button>
-        </form>
+    <div class="instruction">
+        <h3 class="instruction-text">To order our product please follow three steps</h3>
     </div>
-</div>
+    <div class="row three-steps">
+        <div class="col-md-4">
+            <div id="step-1"><button class="drop_btn">Step 1</button></div>
+            <div class="step-description-1">
+                <p>Choes your design type and quantity</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div id="step-2"><button class="drop_btn">Step 2</button></div>
+            <div class="step-description-2">
+                <p>Go to Cart tab on navbar and checkout</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div id="step-3"><button class="drop_btn">Step 3</button></div>
+            <div class="step-description-3">
+                <p><strong>Fill the form and pay :D</p>
+            </div>
+        </div>
+    </div>
+<hr>
 <!-- Projects -->
 <div class="container">
     {% for project in projects %}

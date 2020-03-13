@@ -36,6 +36,7 @@ body {
 }
 .alert {
     margin-bottom: 0px;
+    text-align: center;
 }
 
 .icon-bar {
@@ -151,6 +152,57 @@ body {
     min-height: 40px;
 }
 
+.drop_btn {
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #178acc;
+    color: white;
+    /* border: 1px solid #178acc!important; */
+    border-style: none;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+#description-1 {
+  background-color: yellow;
+  padding: 20px;
+  display: none;
+}
+  
+#step-1:hover + div,
+#step-2:hover + div,
+#step-3:hover + div{
+  display: block;
+}
+
+.btn-primary:hover {
+    opacity: 0.7;
+}
+
+.step-description-1,
+.step-description-2,
+.step-description-3{
+    display: none;
+}
+
+.three-steps {
+    font-size: 16px;
+    margin:50px auto;
+}
+
+.instruction {
+    text-align: center;
+    margin: 50px auto;
+}
+
+.instruction-text {
+    color: #3e1b1b;
+}
+
+.three-steps {
+    text-align: center;
+}
 /* checout.html */
 
 .panel-body {
@@ -174,6 +226,13 @@ body {
     background-attachment: fixed;
     padding-top: 1px;
     margin: 0px;
+}
+
+#login-input {
+    text-align: center;
+    width: 400px;
+    display: block;
+    margin: 50px 0px 100px 350px;
 }
 
 /* cart.html */
@@ -237,9 +296,35 @@ body {
 
 /* profile.html */
 
+.profile-login {
+    text-align: center;
+    margin: 53px;
+}
 
 .profile-text {
     text-shadow: 0px 0px 1px;
+}
+
+/* register.html */
+
+.register-input {
+    width: 600px;
+    margin: 50px 50px 50px 250px;
+}
+
+.password-reset-done {
+    text-align: center;
+    margin: 100px 0px 100px 0px;
+}
+
+.accountform {
+    text-align: center;
+    margin: 100px 0px 100px 0px;
+}
+
+.alert-danger {
+    text-align: center;
+    font-size: 20px;
 }
 
 /* Media Queries */
@@ -275,13 +360,22 @@ body {
     }
 
     .register-input {
-        margin-left: 69px;
-        width: 216px;
+        width: 268px;
         text-align: center;
+        margin: 50px auto;
     }
 
     .checkout-list {
         margin: 0px;
     }
 
+    #login-input {
+        width: 268px;
+        margin: 50px auto;
+    }
+
+    .alert {
+        margin-top: -12px;
+        text-align: center;
+    }
 }

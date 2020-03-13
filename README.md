@@ -3,82 +3,64 @@
 # Graphic-Designer-Art
 [![Build Status](https://www.travis-ci.org/Sreniok/graphic_design.svg?branch=master)](https://www.travis-ci.org/Sreniok/graphic_design)
 
-One or two paragraphs providing an overview of your project.
+Graphic Design-Art is a Django project where the owner can create a project, and they will be displayed on the main page where visitors can add to the cart. The user needs to register to make a purchase. After registration user will be able to fil with all details, including project description and payment.
 
-Essentially, this part is your sales pitch.
- 
 ## UX
  
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
-
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-- As a user type, I want to perform an action, so that I can achieve a goal.
-
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
+The main page is showing all projects available for purchase with description and price. User can register to the website using a register tab in the navbar. If the user already has an account, he can log in using a login tab where can reset the password. In card, user can change the quantity of project and checkout where need to fill the form with all details and project information.
 
 ## Features
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
- 
 ### Existing Features
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
+- Simple website where user can make a purchase a graphic project.
 
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
-
-### Features Left to Implement
-- Another feature idea
+### Potential future features
+- The password reset will need to be fixed 
+- upvote for the project  may be implemented 
+- user can specify the size of the project when adding to cart 
 
 ## Technologies Used
 
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
-
+* [HTML 5](https://html.spec.whatwg.org/) - basic templating language
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference) - site styling
+* [Bootstrap](https://getbootstrap.com/) - HTML structure for mobile first navigation
+* [JQuery](https://code.jquery.com/) - front end site functionality
+* [JavaScript](https://www.keycdn.com/support/javascript-cdn-resources) - required code to action Stripe API
+* [Django](https://www.djangoproject.com/) - python platform for project
+* [Python](https://www.python.org/) - backend functionality
+* [Stripe API](https://stripe.com/en-se) - API to process online payments
+* [AWS](https://aws.amazon.com/) - devlopment platform 
+* [Travis](https://travis-ci.org/) - test integration for site
+* [Heroku](https://dashboard.heroku.com/) - site hosisting platform
 - [JQuery](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
 
 
 ## Testing
+The website was tested using a debugger and was deployed to Travis for checking errors.
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
-
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
-
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
-
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
-
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
-
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+- Main page: add quantity work, and the amount is displayed right to the card 
+- Registering: user can register, and information is displayed when is success
+- Login/Logout: user can log in, or Logout with confirmation message also can reset the password if forgot (currently not working)
+- Cart: the user can see his cart and make changes to quantity or checkout.
+- Checkout: user needs to fill the form correctly if not error message shows up. user can leave post-code and project description empty
 
 ## Deployment
-
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
-
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
-
-In addition, if it is not obvious, you should also describe how to run your code locally.
+- The project is deployed to Heroku.
+- Created Procfile and requirements.txt for dependencies.
+- Linked my Github and environment with Heroku
+- Static file and Media are stored on AWS
+- Pushed to Heroku.
+- Pushed to Github.
+- A website can be found on Heroku (https://graphic-designe-art.herokuapp.com).
+- The repository can be found on Github (https://github.com/Sreniok/graphic_design)
 
 
 ## Credits
 
 ### Content
 - The text for section banner was copied from the [unahealydesign](https://www.unahealydesign.com)
+- The project contains code from code institute Full-Stack Frameworks with Django
 
 ### Media
-- The photos used in this site were obtained from ...
+ The photos used in this site were obtained from google search.
 
-### Acknowledgements
-
-- I received inspiration for this project from X
